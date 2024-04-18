@@ -5,15 +5,16 @@ class Solution {
         for(int i=0;i<s.length();i++){
             if(s.charAt(i)!='*'){
                 st.push(s.charAt(i));
-                ss.append(s.charAt(i));
             }
             if(s.charAt(i)=='*'){
                 st.pop();
-                ss.deleteCharAt(ss.length()-1);
             }
             
         }
-      
+        for(char ch:st){
+            ss.append(ch);
+        }
+    
         return ss.toString();
         
     }
